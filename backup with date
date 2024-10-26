@@ -1,0 +1,10 @@
+#!/bin/bash
+<<note
+this script takezs backup of any destination path given i:wq
+n argument
+note
+
+timestamp=$(date '+%Y-%m-%d_%H-%M-%S')
+backup_dir="${timestamp}_backup.zip"
+zip -r $backup_dir $1
+echo "backup compilete"
